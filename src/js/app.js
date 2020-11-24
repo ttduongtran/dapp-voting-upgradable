@@ -24,6 +24,7 @@ App = {
 
   initContract: function() {
     $.getJSON("Election.json", function(election) {
+      console.log({election});
       // Instantiate a new truffle contract from the artifact
       App.contracts.Election = TruffleContract(election);
       // Connect provider to interact with contract
@@ -79,24 +80,31 @@ App = {
       var candidatesSelect = $('#candidatesSelect');
       candidatesSelect.empty();
 
+      nameCheck = [];
       for (var i = 1; i <= candidatesCount; i++) {
         electionInstance.candidates(i).then(function(candidate) {
           var id = candidate[0];
           var name = candidate[1];
           var voteCount = candidate[2];
 
-          // Render candidate Result
-          var candidateTemplate = "<tr><th>" + id + "</th><td>" + name + "</td><td>" + voteCount + "</td></tr>"
-          candidatesResults.append(candidateTemplate);
-
-          // Render candidate ballot option
-          var candidateOption = "<option value='" + id + "' >" + name + "</ option>"
-          candidatesSelect.append(candidateOption);
+          if (!nameCheck.includes(name)) {
+            nameCheck.push(name);
+            var candidateTemplate = "<tr><th>" + id + "</th><td>" + name + "</td><td>" + voteCount + "</td></tr>"
+            candidatesResults.append(candidateTemplate);
+            // Render candidate ballot option
+            var candidateOption = "<option value='" + id + "' >" + name + "</ option>"
+            candidatesSelect.append(candidateOption);
+          } else {
+            return;
+          }
+          
+          
         });
       }
       return electionInstance.voters(App.account);
     }).then(function(hasVoted) {
       // Do not allow a user to vote
+      console.log({hasVoted})
       if(hasVoted) {
         $('form').hide();
       }
@@ -112,6 +120,7 @@ App = {
     App.contracts.Election.deployed().then(function(instance) {
       return instance.vote(candidateId, { from: App.account });
     }).then(function(result) {
+      console.log({result});
       // Wait for votes to update
       $("#content").hide();
       $("#loader").show();
@@ -125,4 +134,8 @@ $(function() {
   $(window).load(function() {
     App.init();
   });
+
+  // $("#backToVote").on('click', function(event){
+  //   event.preventDefault();
+  // });
 });

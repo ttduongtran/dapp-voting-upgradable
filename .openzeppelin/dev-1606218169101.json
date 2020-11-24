@@ -1,0 +1,197 @@
+{
+  "contracts": {
+    "Election": {
+      "address": "0x8481dBa613fcb69D2719Cb4c4cd11ac35025bF9f",
+      "constructorCode": "608060405234801561001057600080fd5b506106a0806100206000396000f3fe",
+      "bodyBytecodeHash": "0826ec9f40111367f628494a1cd85efaa7bcf43bb6eb57629ce8cbf5d473e47c",
+      "localBytecodeHash": "b629201c431a470756add7bf36f4f614107519400e0ed11814f2230af6e5b631",
+      "deployedBytecodeHash": "b629201c431a470756add7bf36f4f614107519400e0ed11814f2230af6e5b631",
+      "types": {
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_mapping<t_bool>": {
+          "id": "t_mapping<t_bool>",
+          "valueType": "t_bool",
+          "label": "mapping(key => bool)",
+          "kind": "mapping"
+        },
+        "t_struct<Election.Candidate>": {
+          "id": "t_struct<Election.Candidate>",
+          "kind": "struct",
+          "label": "Election.Candidate",
+          "members": [
+            {
+              "label": "id",
+              "astId": 48,
+              "type": "t_uint256",
+              "src": "110:7:1"
+            },
+            {
+              "label": "name",
+              "astId": 50,
+              "type": "t_string",
+              "src": "127:11:1"
+            },
+            {
+              "label": "voteCount",
+              "astId": 52,
+              "type": "t_uint256",
+              "src": "148:14:1"
+            }
+          ]
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_string": {
+          "id": "t_string",
+          "kind": "elementary",
+          "label": "string"
+        },
+        "t_mapping<t_struct<Election.Candidate>>": {
+          "id": "t_mapping<t_struct<Election.Candidate>>",
+          "valueType": "t_struct<Election.Candidate>",
+          "label": "mapping(key => Election.Candidate)",
+          "kind": "mapping"
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Election",
+          "path": "contracts/Election.sol",
+          "label": "voters",
+          "astId": 57,
+          "type": "t_mapping<t_bool>",
+          "src": "213:38:1"
+        },
+        {
+          "contract": "Election",
+          "path": "contracts/Election.sol",
+          "label": "candidates",
+          "astId": 61,
+          "type": "t_mapping<t_struct<Election.Candidate>>",
+          "src": "304:44:1"
+        },
+        {
+          "contract": "Election",
+          "path": "contracts/Election.sol",
+          "label": "candidatesCount",
+          "astId": 63,
+          "type": "t_uint256",
+          "src": "384:27:1"
+        },
+        {
+          "contract": "Election",
+          "path": "contracts/Election.sol",
+          "label": "PersonVote",
+          "astId": 65,
+          "type": "t_uint256",
+          "src": "417:22:1"
+        },
+        {
+          "contract": "Election",
+          "path": "contracts/Election.sol",
+          "label": "admin",
+          "astId": 67,
+          "type": "t_address",
+          "src": "445:20:1"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    },
+    "Box": {
+      "address": "0xC4E72706ca45A24e947D448b3c8BF72dE0d27306",
+      "constructorCode": "608060405234801561001057600080fd5b50610162806100206000396000f3fe",
+      "bodyBytecodeHash": "6ce1416336069b7f2ea2608bab6b7d616e0f433858771cb2e7eb1dc947c61deb",
+      "localBytecodeHash": "e7d598f243fcf278736054ff23795d0e1ffcda24084e288c67ea488be1580181",
+      "deployedBytecodeHash": "e7d598f243fcf278736054ff23795d0e1ffcda24084e288c67ea488be1580181",
+      "types": {
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Box",
+          "path": "contracts/Box.sol",
+          "label": "value",
+          "astId": 3,
+          "type": "t_uint256",
+          "src": "74:21:0"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    }
+  },
+  "solidityLibs": {},
+  "proxies": {
+    "helloworld/Election": [
+      {
+        "address": "0x07506382F734715Aa8835726b611ec5e5d85F450",
+        "version": "1.0.0",
+        "implementation": "0x8481dBa613fcb69D2719Cb4c4cd11ac35025bF9f",
+        "admin": "0x4Fa1c5C1ccB140384C0Cf5Ae042219A74724daD1",
+        "kind": "Upgradeable"
+      },
+      {
+        "address": "0x05254cB122b56e4B55CB858FDe8BE82a6a44c737",
+        "version": "1.0.0",
+        "implementation": "0x8481dBa613fcb69D2719Cb4c4cd11ac35025bF9f",
+        "admin": "0x4Fa1c5C1ccB140384C0Cf5Ae042219A74724daD1",
+        "kind": "Upgradeable"
+      },
+      {
+        "address": "0x518F798EECB9A824a818d738c6Bb4d5c94DC5D48",
+        "version": "1.0.0",
+        "implementation": "0x8481dBa613fcb69D2719Cb4c4cd11ac35025bF9f",
+        "admin": "0x4Fa1c5C1ccB140384C0Cf5Ae042219A74724daD1",
+        "kind": "Upgradeable"
+      }
+    ],
+    "helloworld/Box": [
+      {
+        "address": "0xfEFf8BDf597aA208FD067d8820DC35F487d74822",
+        "version": "1.0.0",
+        "implementation": "0xC4E72706ca45A24e947D448b3c8BF72dE0d27306",
+        "admin": "0x4Fa1c5C1ccB140384C0Cf5Ae042219A74724daD1",
+        "kind": "Upgradeable"
+      },
+      {
+        "address": "0xda027a8F9cB7f8d75D16F46997D801A6bAA03C51",
+        "version": "1.0.0",
+        "implementation": "0xC4E72706ca45A24e947D448b3c8BF72dE0d27306",
+        "admin": "0x4Fa1c5C1ccB140384C0Cf5Ae042219A74724daD1",
+        "kind": "Upgradeable"
+      }
+    ]
+  },
+  "manifestVersion": "2.2",
+  "version": "1.0.0",
+  "proxyAdmin": {
+    "address": "0x4Fa1c5C1ccB140384C0Cf5Ae042219A74724daD1"
+  }
+}

@@ -1,0 +1,289 @@
+{
+  "contracts": {
+    "Box": {
+      "address": "0xe928D6cB26629fe35Bc7D8cCe8042497467bd1f2",
+      "constructorCode": "608060405234801561001057600080fd5b50610162806100206000396000f3fe",
+      "bodyBytecodeHash": "6ce1416336069b7f2ea2608bab6b7d616e0f433858771cb2e7eb1dc947c61deb",
+      "localBytecodeHash": "e7d598f243fcf278736054ff23795d0e1ffcda24084e288c67ea488be1580181",
+      "deployedBytecodeHash": "e7d598f243fcf278736054ff23795d0e1ffcda24084e288c67ea488be1580181",
+      "types": {
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Box",
+          "path": "contracts/Box.sol",
+          "label": "value",
+          "astId": 3,
+          "type": "t_uint256",
+          "src": "74:21:0"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    },
+    "Simple": {
+      "address": "0x5708c374Ffbb2248d5d1C8248245728Eb01ccc4F",
+      "constructorCode": "608060405234801561001057600080fd5b50610761806100206000396000f3fe",
+      "bodyBytecodeHash": "cb828ea69670821a8640221e4a176004c2db39a0dcf4a463e7fcb35c6202d954",
+      "localBytecodeHash": "1e3f4dae9c0179204a1d7681672b7bc559dbab5eef8fcebf99e516484bbf8dc5",
+      "deployedBytecodeHash": "1e3f4dae9c0179204a1d7681672b7bc559dbab5eef8fcebf99e516484bbf8dc5",
+      "types": {
+        "t_struct<Simple.Person>": {
+          "id": "t_struct<Simple.Person>",
+          "kind": "struct",
+          "label": "Simple.Person",
+          "members": [
+            {
+              "label": "id",
+              "astId": 201,
+              "type": "t_uint256",
+              "src": "98:7:3"
+            },
+            {
+              "label": "name",
+              "astId": 203,
+              "type": "t_string",
+              "src": "111:11:3"
+            },
+            {
+              "label": "_is",
+              "astId": 205,
+              "type": "t_bool",
+              "src": "128:8:3"
+            }
+          ]
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_string": {
+          "id": "t_string",
+          "kind": "elementary",
+          "label": "string"
+        },
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_mapping<t_struct<Simple.Person>>": {
+          "id": "t_mapping<t_struct<Simple.Person>>",
+          "valueType": "t_struct<Simple.Person>",
+          "label": "mapping(key => Simple.Person)",
+          "kind": "mapping"
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Simple",
+          "path": "contracts/Simple.sol",
+          "label": "mapPerson",
+          "astId": 210,
+          "type": "t_mapping<t_struct<Simple.Person>>",
+          "src": "145:40:3"
+        },
+        {
+          "contract": "Simple",
+          "path": "contracts/Simple.sol",
+          "label": "Personlength",
+          "astId": 212,
+          "type": "t_uint256",
+          "src": "189:24:3"
+        },
+        {
+          "contract": "Simple",
+          "path": "contracts/Simple.sol",
+          "label": "admin",
+          "astId": 222,
+          "type": "t_address",
+          "src": "289:20:3"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": [],
+        "storageUncheckedVars": [
+          {
+            "contract": "Simple",
+            "path": "contracts/Simple.sol",
+            "label": "mapPerson",
+            "astId": 210,
+            "type": "t_mapping<t_struct<Simple.Person>>",
+            "src": "145:40:3"
+          }
+        ],
+        "storageDiff": []
+      }
+    },
+    "Election": {
+      "address": "0x92D36E99B771b9c26aBd84eE015fE397c3dDE350",
+      "constructorCode": "608060405234801561001057600080fd5b50610503806100206000396000f3fe",
+      "bodyBytecodeHash": "39b055010fc16fe37aee5cf4ac70f73b2ffb9ca5ad554d8d729448af645c9495",
+      "localBytecodeHash": "58808140610a833d89cecc49420e6912f39a73a25462b4170fa6d60b4ec6d04e",
+      "deployedBytecodeHash": "58808140610a833d89cecc49420e6912f39a73a25462b4170fa6d60b4ec6d04e",
+      "types": {
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_mapping<t_bool>": {
+          "id": "t_mapping<t_bool>",
+          "valueType": "t_bool",
+          "label": "mapping(key => bool)",
+          "kind": "mapping"
+        },
+        "t_struct<Election.Candidate>": {
+          "id": "t_struct<Election.Candidate>",
+          "kind": "struct",
+          "label": "Election.Candidate",
+          "members": [
+            {
+              "label": "id",
+              "astId": 48,
+              "type": "t_uint256",
+              "src": "110:7:1"
+            },
+            {
+              "label": "name",
+              "astId": 50,
+              "type": "t_string",
+              "src": "127:11:1"
+            },
+            {
+              "label": "voteCount",
+              "astId": 52,
+              "type": "t_uint256",
+              "src": "148:14:1"
+            }
+          ]
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_string": {
+          "id": "t_string",
+          "kind": "elementary",
+          "label": "string"
+        },
+        "t_mapping<t_struct<Election.Candidate>>": {
+          "id": "t_mapping<t_struct<Election.Candidate>>",
+          "valueType": "t_struct<Election.Candidate>",
+          "label": "mapping(key => Election.Candidate)",
+          "kind": "mapping"
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Election",
+          "path": "contracts/Election.sol",
+          "label": "voters",
+          "astId": 57,
+          "type": "t_mapping<t_bool>",
+          "src": "234:38:1"
+        },
+        {
+          "contract": "Election",
+          "path": "contracts/Election.sol",
+          "label": "candidates",
+          "astId": 61,
+          "type": "t_mapping<t_struct<Election.Candidate>>",
+          "src": "325:44:1"
+        },
+        {
+          "contract": "Election",
+          "path": "contracts/Election.sol",
+          "label": "candidatesCount",
+          "astId": 63,
+          "type": "t_uint256",
+          "src": "405:27:1"
+        },
+        {
+          "contract": "Election",
+          "path": "contracts/Election.sol",
+          "label": "PersonVote",
+          "astId": 65,
+          "type": "t_uint256",
+          "src": "438:22:1"
+        },
+        {
+          "contract": "Election",
+          "path": "contracts/Election.sol",
+          "label": "admin",
+          "astId": 67,
+          "type": "t_address",
+          "src": "466:20:1"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    }
+  },
+  "solidityLibs": {},
+  "proxies": {
+    "helloworld/Box": [
+      {
+        "address": "0x50a9843D2e8453608c8c932619CEe1e6968B894a",
+        "version": "1.0.0",
+        "implementation": "0xe928D6cB26629fe35Bc7D8cCe8042497467bd1f2",
+        "admin": "0xA2110703eddb3225aB5Bb06EF9E62cfD39C20B2E",
+        "kind": "Upgradeable"
+      }
+    ],
+    "helloworld/Simple": [
+      {
+        "address": "0x87771AD33520055Ed97e3dA6c17BF929211Fa8aB",
+        "version": "1.0.0",
+        "implementation": "0x5708c374Ffbb2248d5d1C8248245728Eb01ccc4F",
+        "admin": "0xA2110703eddb3225aB5Bb06EF9E62cfD39C20B2E",
+        "kind": "Upgradeable"
+      }
+    ],
+    "helloworld/Election": [
+      {
+        "address": "0x48347F12209656f0DD146dfc5603820141B6A54C",
+        "version": "1.0.0",
+        "implementation": "0x92D36E99B771b9c26aBd84eE015fE397c3dDE350",
+        "admin": "0xA2110703eddb3225aB5Bb06EF9E62cfD39C20B2E",
+        "kind": "Upgradeable"
+      }
+    ]
+  },
+  "manifestVersion": "2.2",
+  "version": "1.0.0",
+  "proxyAdmin": {
+    "address": "0xA2110703eddb3225aB5Bb06EF9E62cfD39C20B2E"
+  }
+}
